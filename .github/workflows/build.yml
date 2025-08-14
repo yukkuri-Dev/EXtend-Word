@@ -61,9 +61,10 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: out_build.zip
-          name: EXtend-Word Build  // ${{ env.BUILD_DATE }}
+          name: EXtend-Word Builder  // ${{ env.BUILD_DATE }}
           tag_name: ${{ github.run_id }}
           body: |
-            ## EXtend-Word Build
+            ## EXtend-Word Builder
+            # Project Name: ${GITHUB_REPOSITORY##*/}
             Most recent commit: ${{ env.COMMIT_ID }}
 
