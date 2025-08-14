@@ -41,8 +41,8 @@ jobs:
       
       - name: Make
         run: |
-          export $(pwd)/devkitPro
-          export $(pwd)/devkitSH4
+          export DEVKITPRO=$(pwd)/devkitPro
+          export DEVKITSH4=$(pwd)/devkitSH4
           export PATH=$(pwd)/devkitPro/tools/bin:$PATH
           export PATH=$(pwd)/devkitPro/devkitSH4/bin:$PATH
           make 
