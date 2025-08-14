@@ -41,11 +41,11 @@ jobs:
       
       - name: Make
         run: |
-          export DEVKITPRO=$(pwd)/devkitPro
-          export DEVKITSH4=$(pwd)/devkitSH4
-          export PATH=$(pwd)/devkitPro/tools/bin:$PATH
-          export PATH=$(pwd)/devkitPro/devkitSH4/bin:$PATH
-          make 
+          export DEVKITPRO="$(pwd)/devkitPro"
+          export DEVKITSH4="$DEVKITPRO/devkitSH4"
+          export PATH="$DEVKITPRO/tools/bin:$DEVKITSH4/bin:$PATH"
+
+          make
           make out/baybay-o-and-elf
       - name: Zip out folder
         run: |
