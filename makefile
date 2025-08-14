@@ -1,15 +1,12 @@
 .SUFFIXES:
 
-ifeq ($(strip $(DEVKITSH4)),)
-$(error "Please set DEVKITSH4 in your environment. export DEVKITSH4=<path to sdk>")
-endif
 
 include $(DEVKITSH4)/exword_rules
 
 # アプリ情報
-TARGET   := vramfill
-APPID    := HELLO
-APPTITLE := VRAM Filler
+TARGET   := BLANK
+APPID    := BLANK
+APPTITLE := BLANK
 APPMOD   := out/$(TARGET).d01
 
 # ソースファイル
